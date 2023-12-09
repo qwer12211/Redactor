@@ -145,7 +145,7 @@ public class FileManager
 
     public void Save(FileType fileType)
     {
-        Console.WriteLine("Введите название файла для сохранения (без расширения):");
+        Console.WriteLine("Введите название файла для сохранения");
         string fileName = Console.ReadLine();
 
         if (string.IsNullOrEmpty(fileName))
