@@ -16,7 +16,7 @@ class Program
         while (true)
         {
             Console.Clear();
-            Console.WriteLine("Сохранить файл в одном из трех форматов (txt, json, xml) - F1. Закрыть программу - Escape");
+            Console.WriteLine("выберете формат в котором нужно сохранить файл txt, json, xml - F1. Закрыть программу - Escape");
             textEditor.text();
             ConsoleKeyInfo key = Console.ReadKey();
 
