@@ -1,25 +1,21 @@
 using Newtonsoft.Json;
 using System.Xml.Serialization;
 using System;
-using System.Collections.Generic;
 using System.IO;
 
 [Serializable]
 public class Figure
 {
     public string Name { get; set; }
-    public double Width { get; set; }
-    public double Height { get; set; }
 
     public Figure()
     {
     }
 
-    public Figure(string name, double width, double height)
+    public Figure(string name, double shirina, double height)
     {
         Name = name;
-        Width = width;
-        Height = height;
+        
     }
 }
 
@@ -99,8 +95,6 @@ public class FileManager
         foreach (var figure in figures)
         {
             lines.Add(figure.Name);
-            lines.Add(figure.Width.ToString());
-            lines.Add(figure.Height.ToString());
         }
         File.WriteAllLines(filePath, lines);
     }
