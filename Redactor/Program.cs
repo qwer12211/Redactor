@@ -10,10 +10,6 @@ public class Figure
     public double Shirina { get; set; }
     public double Visota { get; set; }
 
-    public Figure()
-    {
-    }
-
     public Figure(string name, double shirina, double visota)
     {
         Name = name;
