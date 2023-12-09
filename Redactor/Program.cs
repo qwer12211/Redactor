@@ -1,20 +1,24 @@
-using System;
-using System.IO;
 using Newtonsoft.Json;
 using System.Xml.Serialization;
-
+using System;
+using System.IO;
 
 [Serializable]
 public class Figure
 {
     public string Name { get; set; }
+    public double Shirina { get; set; }
+    public double Visota { get; set; }
 
-    
+    public Figure()
+    {
+    }
 
-    public Figure(string name, double shirina, double height)
+    public Figure(string name, double shirina, double visota)
     {
         Name = name;
-        
+        Shirina = shirina;
+        Visota = visota;
     }
 }
 
@@ -94,6 +98,8 @@ public class FileManager
         foreach (var figure in figures)
         {
             lines.Add(figure.Name);
+            lines.Add(figure.Shirina.ToString());
+            lines.Add(figure.Visota.ToString());
         }
         File.WriteAllLines(filePath, lines);
     }
