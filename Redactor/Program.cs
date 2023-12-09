@@ -4,6 +4,23 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 
+public class Figure
+{
+    public string Name { get; set; }
+    public double Width { get; set; }
+    public double Height { get; set; }
+
+    public Figure()
+    {
+    }
+
+    public Figure(string name, double width, double height)
+    {
+        Name = name;
+        Width = width;
+        Height = height;
+    }
+}
 class Program
 {
     static void Main(string[] args)
@@ -39,23 +56,7 @@ class Program
 }
 
 [Serializable]
-public class Figure
-{
-    public string Name { get; set; }
-    public double Width { get; set; }
-    public double Height { get; set; }
 
-    public Figure()
-    {
-    }
-
-    public Figure(string name, double width, double height)
-    {
-        Name = name;
-        Width = width;
-        Height = height;
-    }
-}
 
 public class TextEditor
 {
@@ -185,7 +186,7 @@ public class TextEditor
         {
             foreach (var figure in figures)
             {
-                Console.WriteLine($"Имя: {figure.Name}");   
+                Console.WriteLine($"Имя: {figure.Name}");
             }
         }
     }
