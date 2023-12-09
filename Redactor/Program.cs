@@ -73,7 +73,7 @@ public class TextEditor
         }
         else
         {
-            Console.WriteLine("Файл не существует. Создание новой модели.");
+            Console.WriteLine("Файл не существует.");
         }
     }
 
