@@ -1,16 +1,15 @@
-using Newtonsoft.Json;
-using System.Xml.Serialization;
 using System;
 using System.IO;
+using Newtonsoft.Json;
+using System.Xml.Serialization;
+
 
 [Serializable]
 public class Figure
 {
     public string Name { get; set; }
 
-    public Figure()
-    {
-    }
+    
 
     public Figure(string name, double shirina, double height)
     {
