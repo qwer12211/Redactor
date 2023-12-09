@@ -1,4 +1,6 @@
-﻿using System;
+using Newtonsoft.Json;
+using System.Xml.Serialization;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Xml.Serialization;
@@ -75,6 +77,7 @@ public class TextEditor
             Console.WriteLine("Файл не существует. Создание новой модели.");
         }
     }
+
     private void LoadFromTxtFile(string filePath)
     {
         var lines = File.ReadAllLines(filePath);
@@ -137,7 +140,6 @@ public class TextEditor
             }
         }
     }
-
     private void SaveToTxtFile(string filePath)
     {
         List<string> lines = new List<string>();
@@ -172,8 +174,10 @@ public class TextEditor
         }
     }
 
+
     public void DisplayText()
     {
+
         if (figures != null)
         {
             foreach (var figure in figures)
@@ -186,6 +190,7 @@ public class TextEditor
         }
     }
 }
+
 public enum FileType
 {
     Txt,
