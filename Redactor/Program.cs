@@ -1,14 +1,15 @@
 using Newtonsoft.Json;
 using System.Xml.Serialization;
-using System;
-using System.IO;
-
 [Serializable]
 public class Figure
 {
     public string Name { get; set; }
     public double Shirina { get; set; }
     public double Visota { get; set; }
+
+    public Figure()
+    {
+    }
 
     public Figure(string name, double shirina, double visota)
     {
@@ -141,7 +142,7 @@ public class FileManager
 
     public void Save(FileType fileType)
     {
-        Console.WriteLine("Введите название файла для сохранения");
+        Console.WriteLine("Введите название файла для сохранения (без расширения):");
         string fileName = Console.ReadLine();
 
         if (string.IsNullOrEmpty(fileName))
